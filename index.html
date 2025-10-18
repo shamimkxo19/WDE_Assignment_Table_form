@@ -36,9 +36,51 @@
         border: 2px solid black;
         width: 50%;
       }
+      body {
+        margin-left: auto;
+        margin-right: auto;
+      }
+      @media screen and (min-width: 340px) and (max-width: 640px) {
+        body {
+          max-width: 95%;
+        }
+
+        table {
+          width: 95%;
+          font-size: 10px;
+        }
+      }
+
+      @media screen and (min-width: 641px) {
+        body {
+          max-width: 90%;
+          font-size: 1rem;
+        }
+        table {
+          width: 90%;
+        }
+      }
+      @media screen and (min-width: 768px) {
+        body {
+          max-width: 90%;
+        }
+        table {
+          width: 90%;
+        }
+      }
+
+      @media screen and (min-width: 1024px) {
+        body {
+          font-size: 1.5rem;
+        }
+
+        #tt {
+          font-size: 1rem;
+        }
+      }
     </style>
   </head>
-  <body style="margin-left: 100px;">
+  <body style="overflow-x: hidden">
     <p>Html table example:</p>
 
     <h2>Student Records</h2>
@@ -282,55 +324,55 @@
 
     <!-- Table 4 -->
 
-    <table style="margin-top: 50px;">
-
+    <table style="margin-top: 50px">
       <!-- row 1 -->
       <tr>
         <td rowspan="7">Students Information</td>
-        <td rowspan="2" style="position: relative;"><span style="position: relative; top: 18px;">Name</span></td>
+        <td rowspan="2" style="position: relative">
+          <span style="position: relative; top: 18px">Name</span>
+        </td>
         <td colspan="2">Address</td>
       </tr>
 
       <!-- row 2 -->
-       <tr>
+      <tr>
         <td>city</td>
         <td>House No.</td>
-       </tr>
+      </tr>
 
-       <!-- row 3 -->
+      <!-- row 3 -->
 
-       <tr>
+      <tr>
         <td>A</td>
         <td>HND</td>
-        <td style="text-align: right;">1</td>
-       </tr>
+        <td style="text-align: right">1</td>
+      </tr>
 
-       <!-- row 4 -->
-        <tr>
-          <td>B</td>
-          <td>LHR</td>
-          <td style="text-align: center;">2</td>
-        </tr>
+      <!-- row 4 -->
+      <tr>
+        <td>B</td>
+        <td>LHR</td>
+        <td style="text-align: center">2</td>
+      </tr>
 
-        <!-- row 5 -->
-         <tr>
-          <td>C</td>
-          <td>SWL</td>
-          <td style="text-align: left;">3</td>
-         </tr>
+      <!-- row 5 -->
+      <tr>
+        <td>C</td>
+        <td>SWL</td>
+        <td style="text-align: left">3</td>
+      </tr>
 
-         <!-- row 6 -->
-          <tr>
-            <td>D</td>
-            <td>BWP</td>
-            <td style="text-align: right;">4</td>
-          </tr>
-
+      <!-- row 6 -->
+      <tr>
+        <td>D</td>
+        <td>BWP</td>
+        <td style="text-align: right">4</td>
+      </tr>
     </table>
 
     <!-- Table 5 TIME TABLE -->
     <h2 style="text-align: center">Time Table</h2>
-    <table style="margin-left: auto; margin-right: auto">
+    <table id="tt" style="margin-left: auto; margin-right: auto">
       <!-- row 1 -->
       <tr>
         <th>Day/Period</th>
@@ -484,38 +526,52 @@
     </fieldset>
 
     <!-- part 2 options-->
-      <fieldset>
-        <legend>Other Questions</legend>
-        <form action="">
-          <label for="drinks">Choose a drink:</label><br>
-          <input type="radio" id="drink"> <label for="drink">Coffee</label><br>
-          <input type="radio" id="drink"> <label for="drink">Tea</label><br>
-          <input type="radio" id="drink"> <label for="drink">HotChocolate</label><br><br>
+    <fieldset>
+      <legend>Other Questions</legend>
+      <form action="">
+        <label for="drinks">Choose a drink:</label><br />
+        <input type="radio" id="drink" /> <label for="drink">Coffee</label
+        ><br />
+        <input type="radio" id="drink" /> <label for="drink">Tea</label><br />
+        <input type="radio" id="drink" /> <label for="drink">HotChocolate</label
+        ><br /><br />
 
-          <label for="cream">What Cream do you like?</label>
-          <br>
-          <input type="checkbox" id="c1"><label for="chocolate">Chocolate</label><br>
-          <input type="checkbox" id="c2"><label for="chocolate-pudding">Chocolate pudding</label><br>
-          <input type="checkbox" id="c3"><label for="chocolate_pb">Chocolate peanut butter</label><br>
-          <input type="checkbox" id="c4"><label for="vanilla">vanilla</label><br>
-          <input type="checkbox" id="c5"><label for="strawberry">StrawBerry</label><br><br>
+        <label for="cream">What Cream do you like?</label>
+        <br />
+        <input type="checkbox" id="c1" /><label for="chocolate">Chocolate</label
+        ><br />
+        <input type="checkbox" id="c2" /><label for="chocolate-pudding"
+          >Chocolate pudding</label
+        ><br />
+        <input type="checkbox" id="c3" /><label for="chocolate_pb"
+          >Chocolate peanut butter</label
+        ><br />
+        <input type="checkbox" id="c4" /><label for="vanilla">vanilla</label
+        ><br />
+        <input type="checkbox" id="c5" /><label for="strawberry"
+          >StrawBerry</label
+        ><br /><br />
 
-          <label for="school"><strong>Select a school:</strong></label>
-    <br>
-    <select id="school" name="school" style="width: 150px; border-radius: 5px;">
-      <option value="harvard">Harvard</option>
-      <option value="mit">MIT</option>
-      <option value="stanford">Stanford</option>
-      <option value="yale">Yale</option>
-    </select>
+        <label for="school"><strong>Select a school:</strong></label>
+        <br />
+        <select
+          id="school"
+          name="school"
+          style="width: 150px; border-radius: 5px"
+        >
+          <option value="harvard">Harvard</option>
+          <option value="mit">MIT</option>
+          <option value="stanford">Stanford</option>
+          <option value="yale">Yale</option>
+        </select>
 
-  <br><br>
+        <br /><br />
 
-  <label for="comment">Please provide comments</label>
-  <br>
-  <textarea name="textbox" id="comment"></textarea>
-        </form>
-      </fieldset>
-      <input type="submit" name="submit" id="submit">
+        <label for="comment">Please provide comments</label>
+        <br />
+        <textarea name="textbox" id="comment"></textarea>
+      </form>
+    </fieldset>
+    <input type="submit" name="submit" id="submit" />
   </body>
 </html>
