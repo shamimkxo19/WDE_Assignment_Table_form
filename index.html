@@ -65,6 +65,7 @@
       @media screen and (min-width: 768px) {
         body {
           max-width: 90%;
+          white-space: nowrap;
         }
         table {
           width: 90%;
@@ -81,11 +82,15 @@
         }
       }
 
-      @media screen and (max-width: 360px){
-         #tt {
+      @media screen and (max-width: 360px) {
+        #tt {
           width: 80%;
-          font-size: .5rem;
+          font-size: 0.5rem;
           overflow-x: hidden;
+        }
+
+        #t2 {
+          font-size: 0.5rem;
         }
       }
     </style>
@@ -170,7 +175,7 @@
     <br />
 
     <!-- Table 2 -->
-    <table>
+    <table id="t2">
       <!-- Row 1 -->
       <tr>
         <th>Country</th>
